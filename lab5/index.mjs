@@ -14,7 +14,7 @@ app.get('/', (req, res) => {
 
 app.get('/planetInfo', (req, res) => {
     let planet = req.query.planet;
-    let planetInfo = planets['get${planet}']();
+    let planetInfo = planets[`get${planet}`]();
    res.render('planet.ejs', {planetInfo}) // can only pass one object
 });
 
