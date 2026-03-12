@@ -49,7 +49,17 @@
   </div>
 </nav>
 
-    <h2>Home</h2>
+    <div class="container-fluid m-5 row">
+
+        <div class="p-4 col">
+            <h2>Asteroids</h2>
+        </div>
+        <%= asteroidInfo.description %>
+    </div>
+
+    <div class="card col">
+        <img src="<%= asteroidInfo.image %>">
+    </div>
 
 </body>
 </html>

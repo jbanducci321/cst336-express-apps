@@ -1,4 +1,5 @@
 import express from 'express';
+import { getAsteroids } from 'npm-solarsystem';
 const planets = (await import('npm-solarsystem')).default;
 
 const app = express();
@@ -16,6 +17,11 @@ app.get('/planetInfo', (req, res) => {
     let planet = req.query.planet;
     let planetInfo = planets[`get${planet}`]();
    res.render('planet.ejs', {planetInfo}) // can only pass one object
+});
+
+app.get('/asteroid', (req, res) => {
+    let asteroidInfo = getAsteroids();
+   res.render('asteroid.ejs', {asteroidInfo}) // can only pass one object
 });
 
 // mercury
