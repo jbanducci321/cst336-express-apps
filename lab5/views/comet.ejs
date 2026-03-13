@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include("partials/head.ejs") %>
+
+</head>
+<body>
+    <h1 class="bg-info text-white p-3 m-0"> The Solar System </h1>
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <%- include("partials/nav.ejs") %>
+</nav>
+    <h2>Comets</h2>
+    <div class="container-fluid m-5 row">
+
+        <div class="p-4 col">
+            <%= cometInfo.def %>
+        </div>
+
+        <div class="card col">
+            <img src="<%= cometInfo.image %>">
+        </div>
+    </div>
+
+    <footer>
+      <%- include("partials/footer.ejs") %>
+    </footer>
+
+</body>
+</html>

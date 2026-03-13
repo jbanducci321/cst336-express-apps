@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include("partials/head.ejs") %>
+
+</head>
+<body>
+    <h1 class="bg-info text-white p-3 m-0"> The Solar System </h1>
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <%- include("partials/nav.ejs") %>
+</nav>
+
+    <h2>NASA: Picture of the Day</h2>
+
+    <img src="<%= imagePOD %>" width="500">
+
+    <footer>
+      <%- include("partials/footer.ejs") %>
+    </footer>
+</body>
+</html>
