@@ -16,7 +16,7 @@ app.get('/', async (req, res) => {
 
     let randomIndex = Math.floor(Math.random() * 50);
 
-    let imageCategory = "planets"; // default search term
+    let imageCategory = "solar system"; // default search term
 
     let url = "https://pixabay.com/api/?key=5589438-47a0bca778bf23fc2e8c5bf3e&per_page=50&orientation=horizontal&q=" + imageCategory;
 
