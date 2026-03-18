@@ -9,14 +9,14 @@ body {
 
 h1 {
     background-color: #000000 !important;
-    color: #ffffff !important;
+    /* color: #ffffff !important; */
     padding: 15px;
     text-align: center;
 }
-
+/* 
 p {
     color: #ddd;
-}
+} */
 
 nav.navbar {
     background-color: #0d0d0d !important;
@@ -36,6 +36,10 @@ nav.navbar {
     font-weight: bold;
     padding: 8px 14px !important;
     border-radius: 8px;
+}
+
+.dropdown-menu .nav-link {
+    color: black !important;
 }
 
 
