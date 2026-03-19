@@ -33,7 +33,18 @@ app.get('/', async (req, res) => {
 app.get('/planetInfo', (req, res) => {
     let planet = req.query.planet;
     let planetInfo = planets[`get${planet}`]();
-   res.render('planet.ejs', {planetInfo, planet}) // can only pass one object
+
+    if (planet === 'Mars') {
+        planetInfo.image = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlhOxqoJHJmyTk-tmsMDN5KqSmLM-BG_rmeg&s';
+    }
+    if (planet === 'Jupiter') {
+        planetInfo.image = 'https://static.scientificamerican.com/sciam/cache/file/03F4BD48-09E2-4268-84D73CFADF043A00_source.jpg?w=1200';
+    }
+    if (planet === 'Uranus') {
+        planetInfo.image = 'https://assets.science.nasa.gov/dynamicimage/assets/science/psd/solar/2023/09/p/i/a/1/PIA18182-1.jpg?w=1720&h=1720&fit=clip&crop=faces%2Cfocalpoint';
+    }
+
+    res.render('planet.ejs', { planetInfo, planet });
 });
 
 app.get('/asteroid', (req, res) => {
